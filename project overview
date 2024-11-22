@@ -1,44 +1,33 @@
-Purpose
-The primary purpose of this program is to provide a simple, user-friendly way to track personal or small-scale expenses. 
-By storing expense data in a CSV file, users can log their spending habits and view them later for financial planning or record-keeping purposes. 
-This program helps users maintain a digital ledger without the need for complex tools or software.
+This project is a Graphical User Interface (GUI) implementation of the classic Tic Tac Toe game using Python's tkinter library. 
+It is a simple two-player game where players alternate marking spaces on a 3x3 grid, attempting to align three of their marks horizontally, 
+vertically, or diagonally. The program also detects ties if no winning combinations are possible.
 
+Features:
 
-Features
-1:Expense Storage:
-Uses a CSV file (expenses.csv) as a lightweight database to persist expense records.
-Ensures that data is preserved between program sessions.
+1. Interactive GUI:
+    - A 3x3 grid represented by buttons that players can click to mark their moves.
+    - Buttons dynamically update their text to "X" or "O" based on the current player.
+2. Two-Player Turn Management:
+    - Players take turns, with player X starting the game.
+    - The game alternates between players automatically.
+3. Win Detection:
+    - Checks all possible winning conditions (rows, columns, diagonals) after each move.
+    - Displays a message announcing the winner (Player X or O).
+4. Tie Detection:
+    - If all spaces are filled and no player has won, the game announces a tie.
+5. Reusability:
+    - Although not implemented in this version, the program can be extended to include a "Reset" button or automated restart.
 
-2:Add Expense:
-Allows the user to input new expense details: date, category, and amount.
-Updates the in-memory list of expenses during the session.
+Core Functionalities
 
-3:View Expenses:
-Displays all recorded expenses in a tabular format for easy readability.
-Includes columns for date, category, and amount.
-
-4:Save and Load Functionality:
-Automatically loads previously recorded expenses from the CSV file when the program starts.
-Saves all current session expenses to the same file upon exiting the program.
-
-5:User-Friendly Interface:
-Text-based menu system with clear instructions.
-Provides feedback for every action (e.g., expense added, invalid input).
-
-6:Cross-Platform Compatibility:
-Written in standard Python, it can run on any platform with Python installed (Windows, macOS, Linux).
-
-
-Expected Outcomes
-1:Data Persistence:
-Users can record their expenses during one session and retrieve them during subsequent sessions without data loss.
-
-2:Ease of Use:
-The straightforward interface ensures that even users with minimal technical knowledge can manage their expenses.
-
-3:Efficient Expense Tracking:
-The ability to log and categorize expenses provides a clear picture of spending patterns.
-
-4:Improved Financial Awareness:
-By viewing and categorizing expenses, users gain insights into their financial habits, enabling better budget planning.
-
+1. Grid Creation:
+    - The game board is created using **`Button`** widgets arranged in a grid layout.
+2. Event Handling:
+    - Button clicks are handled by a single function, which:
+        - Updates the button's text based on the current player.
+        - Disallows moves on already-marked buttons.
+3. Win/Tie Detection:
+    - Logic checks all possible winning combinations for both "X" and "O".
+    - A flag tracks the number of moves to detect ties.
+4. Feedback to Players:
+    - Messageboxes inform players of invalid moves, wins, or ties.
